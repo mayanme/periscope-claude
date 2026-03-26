@@ -1,0 +1,88 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+
+@layer base {
+  body {
+    @apply bg-gray-50 text-gray-900 antialiased;
+  }
+}
+
+/* ── Print styles ─────────────────────────────────────────────────────────── */
+@media print {
+  /* Force color rendering */
+  * {
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+  }
+
+  /* Hide navigation, buttons, interactive elements */
+  nav,
+  .no-print,
+  button:not(.print-visible),
+  .print-hide {
+    display: none !important;
+  }
+
+  /* Remove background and shadows for cleaner print */
+  body {
+    background: white !important;
+    font-family: Georgia, Cambria, serif;
+    font-size: 11pt;
+    line-height: 1.6;
+  }
+
+  .brief-section {
+    page-break-inside: avoid;
+    margin-bottom: 1.5rem;
+  }
+
+  .brief-section + .brief-section {
+    page-break-before: always;
+  }
+
+  /* Remove card shadows */
+  .shadow,
+  .shadow-sm,
+  .shadow-md,
+  .shadow-lg,
+  [class*="shadow"] {
+    box-shadow: none !important;
+  }
+
+  /* Remove rounded corners for a formal document look */
+  [class*="rounded"] {
+    border-radius: 0 !important;
+  }
+
+  /* Brief header */
+  .brief-header {
+    border-bottom: 2px solid #1e293b;
+    margin-bottom: 1rem;
+    padding-bottom: 0.75rem;
+  }
+
+  /* Fit score chip looks fine in print */
+  .fit-score-chip {
+    border: 2px solid currentColor;
+  }
+
+  /* Sources section hidden in print */
+  .sources-section {
+    display: none !important;
+  }
+
+  /* Ensure links show their URL */
+  a[href]:after {
+    content: " (" attr(href) ")";
+    font-size: 9pt;
+    color: #666;
+  }
+
+  /* But not for icon links or buttons */
+  a.no-href-print:after {
+    content: none;
+  }
+}

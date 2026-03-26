@@ -1,0 +1,83 @@
+HORIZON VENTURES — INTERNAL KNOWLEDGE BASE
+==========================================
+Document type: Fund Overview & Investment Thesis
+Last updated: Q1 2026
+
+ABOUT HORIZON VENTURES
+-----------------------
+Horizon Ventures is an early-stage venture capital firm focused on B2B enterprise software and AI-driven infrastructure. We invest at Seed and Series A, writing checks of $500K–$2M. We are a thesis-driven fund with deep operator experience across enterprise sales, data infrastructure, and applied AI.
+
+We believe the next decade of value creation in enterprise software will be defined by three convergent trends:
+1. AI-native workflow automation replacing legacy SaaS point solutions
+2. The rise of the "composable enterprise" — modular, API-first infrastructure
+3. Vertical AI: specialized models trained on proprietary industry data outperforming general-purpose LLMs in domain tasks
+
+INVESTMENT THESIS
+-----------------
+We invest in B2B software companies where:
+
+- The founding team has deep domain expertise or prior operator experience in the target market
+- The product has a defensible data moat or network effect that compounds over time
+- There is evidence of early product-market fit: $100K+ ARR or 10+ design partners with documented ROI
+- The market is large ($1B+ TAM) and underserved by legacy incumbents
+- The business model lends itself to land-and-expand with strong net revenue retention (>110%)
+
+Stage: Seed and Series A (primary), occasional pre-seed for exceptional teams
+Check size: $500K–$2M
+Geography: North America, with interest in European companies expanding to the US
+Sectors of focus: Enterprise SaaS, Data Infrastructure, Applied AI, Developer Tools, Supply Chain Tech
+
+PORTFOLIO COMPANIES (Selected)
+-------------------------------
+
+1. StreamlineAI (Series A, 2024)
+   - AI-powered procurement automation for mid-market manufacturing companies
+   - ARR at investment: $1.8M, growing 4x YoY
+   - Why we invested: Deep founder-market fit (both founders spent 10+ years in procurement operations), proprietary dataset of 50M+ SKU price records, NRR of 130%
+   - Key lesson: Integration-first GTM (connecting directly into ERP systems) drove retention and expanded deal size
+
+2. DataBridge Labs (Seed, 2023)
+   - Real-time data synchronization middleware for multi-cloud enterprise environments
+   - ARR at investment: $420K across 8 enterprise customers
+   - Why we invested: Technical moat (sub-10ms latency sync, patent-pending), co-founder is former Google Cloud infrastructure lead, strong inbound from Salesforce AppExchange
+   - Key lesson: Infrastructure plays require patience on GTM; strong technical credibility drives inbound from larger vendors
+
+3. Veridian Health (Seed, 2023)
+   - Clinical decision support AI for emergency department triage at community hospitals
+   - ARR at investment: $280K, 6 live hospital deployments
+   - Why we invested: First product designed from the ground up for the community hospital segment (not a downgrade from enterprise), FDA breakthrough device designation
+   - Key lesson: Regulatory milestones can be fundraising catalysts; plan your Series A timeline around them
+
+INVESTMENT MEMOS — EXCERPTS
+-----------------------------
+
+MEMO: DataBridge Labs (Investment Decision, March 2023)
+
+Summary: DataBridge addresses the enterprise data synchronization problem that has plagued multi-cloud deployments since 2019. Every Fortune 500 company we spoke with cited "data consistency across environments" as a top-3 infrastructure headache. The founding team (Priya Nair, ex-Google Cloud; Marcus Webb, ex-Palantir data engineering) has built a technically differentiated product that Salesforce's platform team described as "the best we've seen for real-time sync."
+
+Concerns: (1) Sales cycle length — enterprise deals are 6-9 months. We need to see the pipeline velocity improve in year 1. (2) Competition from cloud-native solutions (AWS Glue, Azure Data Factory) is a risk if they commoditize. Mitigation: DataBridge's edge is the cross-cloud and cross-vendor interoperability that native tools cannot provide.
+
+Decision: Invest $750K at $7M pre-money. Lead the round. Target Series A in 18-24 months at $2M+ ARR.
+
+---
+
+MEMO: Rejected Deal — AutoScribe AI (Q3 2024)
+
+AutoScribe was building AI-powered clinical documentation for outpatient specialty practices. Good technology, strong team (CTO from Epic Systems), early traction ($90K ARR, 4 customers).
+
+Why we passed: (1) The market is extremely crowded — Nuance (Microsoft), Suki, Ambience, and Abridge are all well-funded and ahead on clinical AI documentation. Differentiation story was unconvincing. (2) Reimbursement and billing integration complexity would delay enterprise deployment. (3) Founder was not able to clearly articulate why they win against Nuance specifically.
+
+Lesson for pipeline: When evaluating clinical AI, ask the hard competitive displacement question early. Being 10% better than Nuance is not enough when Nuance is already embedded in Epic.
+
+CRITERIA CHECKLIST (Internal Use)
+-----------------------------------
+Use this when evaluating new deals:
+
+[ ] Founder-market fit: Do the founders have a right to win this market?
+[ ] Technical moat: Is there IP, data, or architecture that is hard to replicate in 18 months?
+[ ] Early PMF signal: $100K+ ARR or 10+ paying customers with documented outcomes?
+[ ] Market size: Is the SAM at least $500M?
+[ ] Competitive differentiation: Can the team answer "why do you win against [incumbent]" in one crisp sentence?
+[ ] Business model: Is there a clear path to NRR > 110%?
+[ ] Stage alignment: Seed or Series A? Check size $500K–$2M?
+[ ] Reference checks: Can we get 3+ customer references before term sheet?

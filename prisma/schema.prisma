@@ -1,0 +1,78 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider  = "postgresql"
+  url       = env("DATABASE_URL")
+  directUrl = env("DIRECT_URL")
+}
+
+// ── Firm settings (always one row, id = 1) ─────────────────────────────────
+model FirmSettings {
+  id          Int      @id @default(1)
+  name        String   @default("My Fund")
+  thesis      String   @default("")
+  stageFocus  String[] @default([])
+  sectorFocus String[] @default([])
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+}
+
+// ── Internal documents uploaded for RAG ────────────────────────────────────
+model InternalDoc {
+  id        String     @id @default(cuid())
+  filename  String
+  filePath  String
+  chunks    DocChunk[]
+  createdAt DateTime   @default(now())
+}
+
+model DocChunk {
+  id       String      @id @default(cuid())
+  docId    String
+  doc      InternalDoc @relation(fields: [docId], references: [id], onDelete: Cascade)
+  chunkIdx Int
+  content  String
+  // tsvector populated by DB trigger — not managed by Prisma directly
+  tsv      Unsupported("tsvector")?
+
+  @@index([docId])
+}
+
+// ── Deals ──────────────────────────────────────────────────────────────────
+enum DealStatus {
+  PENDING
+  RESEARCHING
+  SYNTHESIZING
+  COMPLETE
+  FAILED
+}
+
+model Deal {
+  id            String     @id @default(cuid())
+  companyName   String     @default("")
+  companyUrl    String?
+  pitchDeckPath String?
+  status        DealStatus @default(PENDING)
+  errorMessage  String?
+  researchData  Json?
+  brief         Brief?
+  createdAt     DateTime   @default(now())
+  updatedAt     DateTime   @updatedAt
+}
+
+// ── Brief (one-to-one with Deal) ───────────────────────────────────────────
+model Brief {
+  id                 String   @id @default(cuid())
+  dealId             String   @unique
+  deal               Deal     @relation(fields: [dealId], references: [id], onDelete: Cascade)
+  companyOverview    Json
+  founderAndTeam     Json
+  marketLandscape    Json
+  tractionFinancials Json
+  fundFit            Json
+  sources            Json
+  createdAt          DateTime @default(now())
+  updatedAt          DateTime @updatedAt
+}
